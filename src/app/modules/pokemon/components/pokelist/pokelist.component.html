@@ -1,0 +1,11 @@
+<div [ngClass]="bgColor">
+    <ul>
+        <li *ngFor="let pokemon of pokemons" (click)="pokemonDetails(pokemon.id)"
+            class="m-4 d-flex align-items-center w-100">
+            {{ pokemon?.name }}
+            <img src="{{ pokemon?.sprites?.front_default }}">
+            <button class="btm btn-danger btn-sm" (click)="deletePokemon(pokemon)" [ngClass]="hideBtn">Elimina</button>
+
+        </li>
+    </ul>
+</div>

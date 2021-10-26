@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-between align-items-center vh-100 p-5 bg-image">
+    <app-pokelist [pokemons]="rejectedPokemons" [hideBtn]="'btn-d-none'" [bgColor]="'bg-color-danger'">
+    </app-pokelist>
+
+    <app-pokegenerator [pokemon]="pokemon" [pokemons]="catchedPokemons" (selectedPokemon)="pushPokemons($event)">
+    </app-pokegenerator>
+
+    <app-pokelist [pokemons]="catchedPokemons" (deletedPokemon)="deletePokemon($event)" [bgColor]="'bg-color-success'">
+    </app-pokelist>
+</div>
